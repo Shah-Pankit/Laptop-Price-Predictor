@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Now</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="icon" href="my_favicon.ico" type="image/x-icon">
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/24fb80501e.js" crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script>
+    <script src="script2.js"></script> -->
+    <script src="newscript.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+        .selected {
+            border: 5px solid black;
+            /* You can customize the border style */
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="home.html"><img src="blue_flame-removebg-preview.png" alt="LOGO"
+                        class="img_logo">TECH X</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link home-link" href="home.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link contact_space" href="#">CONTACT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SUBSCRIBE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="frontend.html">LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SIGNUP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <form action="/predict" method="post">
+        <div class="price_predictor">
+            <label for="GPU">How Many No. Of GPU's Will It Contain ?</label>
+            <div class="btn-group" role="group" aria-label="GPU Options" id="gpu-options">
+                <button type="button" class="btn btn-primary gpu-option my_btn_1" value="1">1 (OnBoard)</button>
+                <button type="button" class="btn btn-warning gpu-option" value="2">2</button>
+                <button type="button" class="btn btn-danger gpu-option" value="3">3</button>
+                <button type="button" class="btn btn-light gpu-option" value="4">4</button>
+            </div>
+        </div>
+
+        <div class="price_predictor" style="background-color: rgb(114, 110, 110);">
+            <label for="GPU">How Many CPU Cores Will It Contain ?</label>
+            <div class="btn-group" role="group" aria-label="Core Options" id="core-options">
+                <button type="button" class="btn btn-primary core-option my_btn_1" value="Core1">Single Core</button>
+                <button type="button" class="btn btn-warning core-option" value="2">Dual Core</button>
+                <button type="button" class="btn btn-danger core-option" value="4">Quad Core</button>
+                <button type="button" class="btn btn-light core-option" value="6">Hexa Core</button>
+                <button type="button" class="btn btn-primary core-option my_btn_1" value="8">Octa Core</button>
+                <button type="button" class="btn btn-warning core-option" value="10">Deca Core</button>
+                <button type="button" class="btn btn-danger core-option" value="12">Dodeca Core (12 Cores)</button>
+                <button type="button" class="btn btn-light core-option" value="16">Hexadeca Core (16 Cores)</button>
+                <button type="button" class="btn btn-primary core-option" value="18">Octadeca Core (18
+                    Cores)</button>
+                <button type="button" class="btn btn-light core-option my_btn_1" value="20">Viginiti Core (20
+                    Cores)</button>
+                <button type="button" class="btn btn-danger core-option" value="22">Duo-Viginiti Core (22
+                    Cores)</button>
+                <button type="button" class="btn btn-warning core-option" value="24">Tetra_Viginiti Core (24
+                    Cores)</button>
+            </div>
+        </div>
+
+        <div class="price_predictor">
+            <label for="GPU">What Will Be The Size Of RAM ?</label>
+            <div class="btn-group" role="group" aria-label="RAM Options" id="RAM-options">
+                <button type="button" class="btn btn-primary RAM-option my_btn_1" value="RAM2">2GB</button>
+                <button type="button" class="btn btn-warning RAM-option" value="4">4GB</button>
+                <button type="button" class="btn btn-danger RAM-option" value="6">6GB</button>
+                <button type="button" class="btn btn-light RAM-option" value="8">8GB</button>
+                <button type="button" class="btn btn-primary RAM-option my_btn_1" value="12">12GB</button>
+                <button type="button" class="btn btn-warning RAM-option" value="16">16GB</button>
+                <button type="button" class="btn btn-danger RAM-option" value="32">32GB</button>
+                <button type="button" class="btn btn-light RAM-option" value="64">64GB</button>
+            </div>
+        </div>
+
+        <div class="price_predictor" style="background-color:rgb(114, 110, 110);">
+            <label for="GPU">What Will Be The Size Of ROM ?</label>
+            <div class="btn-group" role="group" aria-label="ROM Options" id="ROM-options">
+                <button type="button" class="btn btn-primary ROM-option my_btn_1" value="ROM64">64GB</button>
+                <button type="button" class="btn btn-warning ROM-option" value="128">128GB</button>
+                <button type="button" class="btn btn-danger ROM-option" value="256">256GB</button>
+                <button type="button" class="btn btn-light ROM-option" value="512">512GB</button>
+                <button type="button" class="btn btn-primary ROM-option my_btn_1" value="1000">1TB</button>
+                <button type="button" class="btn btn-warning ROM-option" value="2000">2TB</button>
+                <button type="button" class="btn btn-danger ROM-option" value="3000">3TB</button>
+                <button type="button" class="btn btn-light ROM-option" value="4000">4TB</button>
+            </div>
+        </div>
+
+        <div class="price_predictor">
+            <label for="brand">Please Select The Brand:</label>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle btn-warning btn-lg" type="button" id="brandDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <b>Brands</b>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="brandDropdown" id="brandList">
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('ACER')"
+                            data-value="ACER">ACER</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('ASUS')"
+                            data-value="ASUS">ASUS</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('DELL')"
+                            data-value="DELL">DELL</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('HP')"
+                            data-value="HP">HP</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('LENOVO')"
+                            data-value="LENOVO">LENOVO</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('MSI')"
+                            data-value="MSI">MSI</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('SAMSUNG')"
+                            data-value="SAMSUNG">SAMSUNG</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('XIAOMI')"
+                            data-value="XIAOMI">XIAOMI</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('RAZER')"
+                            data-value="RAZER">RAZER</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('HUAWEI')"
+                            data-value="HUAWEI">HUAWEI</button></li>
+                    <li><button type="button" class="dropdown-item" onclick="displaySelectedBrand('TOSHIBA')"
+                            data-value="TOSHIBA">TOSHIBA</button></li>
+                </ul>
+            </div>
+
+            <span id="selectedBrandDisplay" style="color: white; background-color: black;"></span>
+
+        </div>
+        <div class="Submit">
+            <button type="submit" class="btn btn-danger submit_final" value="submit" id="predictButton"><a href="page3.html" class="my_btn_text">Predict Now!!</a></button>
+        </div>
+    </form>
+    <!-- --------------------FOOTER------------ -->
+    <footer class="footer">
+        <div class="footer1">
+            <div class="contact us my_footer_common">
+                <p class="common">CONTACT ME</p>
+                <p>Phone: +91 7229013335</p>
+                <p>Email: pankitshah493@gmail.com</p>
+            </div>
+            <div class="about my_footer_common">
+                <p class="common">ABOUT ME</p>
+                <p>Pursuing B.E. in Computer Engineering</p>
+                <p>Pursuing Minor/Honourer's Degree in Data Science</p>
+                <p>AI/ML Developer</p>
+            </div>
+            <div class="follow my_footer_common">
+                <p class="common">FOLLOW ME</p>
+                <a href="https://www.facebook.com/profile.php?id=100081967518259" target="_blank"><i
+                        class="fa-brands fa-facebook-f footer-icon" style="color: #ffffff;"></i></a>
+                <a href="https://github.com/Shah-Pankit" target="_blank"><i class="fab fa-github"
+                        style="color: #ffffff;"></i></a>
+                <a href="https://www.linkedin.com/in/pankit-shah-573a94250/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in footer-icon" style="color: #ffffff;"></i></a>
+            </div>
+        </div>
+        <div class="footer2">
+            <p class="common2">@TECH X</p>
+            <p class="common2">Created By PANKIT D. SHAH</p>
+        </div>
+    </footer>
+</body>
+
+</html>

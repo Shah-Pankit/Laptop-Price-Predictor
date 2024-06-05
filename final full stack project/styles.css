@@ -1,0 +1,211 @@
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .img_my {
+        width: 100%;
+    }
+
+    .out_navbar {
+        display: flex;
+        background-color: black;
+        color: white;
+    }
+
+    .img_logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .out_navbar {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .out_navbar>* {
+            margin: 10px 0;
+        }
+
+        .nav-link.home-link {
+            padding-left: 0;
+            /* Reset padding */
+        }
+    }
+
+    .welcome {
+        background-color: yellow;
+        padding: 10vh 0 10vh calc(55vw - 225px);
+        font-size: 30px;
+    }
+
+    .text_line {
+        background-color: blue;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 90px 20px 85px;
+    }
+
+    .image_bg {
+        background-color: rgb(238, 241, 241);
+        position: relative;
+        text-align: center;
+    }
+
+    .my_btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .my_btn_text {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* ----------------PAGE 2.html CSS----------------- */
+
+    .price_predictor {
+        padding: 20px 0 20px 0;
+        background-color: darkcyan;
+        text-align: center;
+        color: white;
+    }
+
+    .my_btn_1 {
+        margin-left: 50px;
+    }
+
+    /* Adjustments for arranging buttons on separate lines */
+    .price_predictor label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .price_predictor .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .price_predictor .btn-group .btn {
+        margin: 5px;
+    }
+
+    .dropdown-menu {
+        text-align: center;
+    }
+
+    .footer {
+        background-color: rgb(50, 48, 48);
+        color: white;
+        padding: 20px 0;
+    }
+
+    .footer1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer1>div {
+        flex: 1;
+        margin: 10px 100px 15px 100px;
+    }
+
+    .footer2 {
+        text-align: center;
+        margin-top: 20px;
+        background-color: rgb(50, 48, 48);
+    }
+
+    .common {
+        color: yellow;
+    }
+
+    .common2 {
+        margin-bottom: 0;
+        color: white;
+        font-size: 4px;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .footer-icon {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .footer-links {
+        padding-left: 2%;
+        padding-right: 2%;
+
+    }
+
+    @media only screen and (max-width: 768px) {
+        .footer1 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer1>div {
+            margin: 10px 0;
+        }
+
+        .my_footer_common {
+            margin: 50px 30px 30px 0;
+            /* Added margin-right: 30px; */
+        }
+
+    }
+
+    .Submit {
+        background-color: rgb(255, 234, 0);
+        text-align: center;
+        /* Center align the button */
+        margin: 20px auto;
+        /* Center horizontally and add margin */
+        max-width: 80%;
+    }
+
+    .submit_final {
+        margin: 20px auto;
+    }
+
+    /* JAVASCRIPT CSS */
+    /* CSS for active state of buttons */
+    .btn.active {
+        border: 5px solid black !important;
+    }
+
+    .selectedBrandDisplay {
+        background-color: black;
+        color: white;
+    }
+
+    /* --------Page 3 .html--------- */
+
+    .prediction_here{
+        height: 200px;
+        width: 100%;
+        background-color: yellow;
+        text-align: center;
+        padding-top: 20px;
+        border-top: 5px solid red;
+        border-left: 5px solid red;
+        border-right: 5px solid red;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size:large;
+    }
+    .output_pred{
+        text-align: center;
+        background-color:yellow ;
+        font-size: large;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border-bottom: 5px solid red;
+        border-left: 5px solid red;
+        border-right: 5px solid red;
+    }
